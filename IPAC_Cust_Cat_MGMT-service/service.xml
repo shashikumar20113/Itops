@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 7.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_7_0_0.dtd">
+
+<service-builder package-path="com.lti.itops.ipac.custcatmgmt">
+	<author>sunprabh</author>
+	<namespace>IPAC_CUST_CAT_MGMT</namespace>
+    <entity name="TowerCustomerMap" remote-service="false" local-service="true">
+        <column name="towerCustomerId" type="long" primary="true"></column>
+        <column name="towerId" type="long"></column>
+        <column name="organizationId" type="long"></column>
+        <column name="name" type="String" localized="true"></column>
+        <column name="companyId" type="long"></column>
+        <column name="createdBy" type="long"></column>
+        <column name="createdOn" type="Date"></column>
+        <column name="modifiedBy" type="long"></column>
+        <column name="modifiedOn" type="Date"></column>
+        <column name="statusId" type="int"></column>
+        <finder name="organization" return-type="Collection">
+             <finder-column name="organizationId"></finder-column>
+       	</finder>
+        <finder name="T_O" return-type="long">
+            <finder-column name="towerId"></finder-column>
+            <finder-column name="organizationId"></finder-column>
+        </finder>
+    </entity>
+
+	<entity name="TTechnologyCustomerMap" remote-service="false" local-service="true">
+        <column name="TTechnologyCustomerId" type="long" primary="true"></column>
+        <column name="towerTechnologyId" type="long"></column>
+        <column name="organizationId" type="long"></column>
+        <column name="name" type="String" localized="true"></column>
+        <column name="companyId" type="long"></column>
+        <column name="createdBy" type="long"></column>
+        <column name="createdOn" type="Date"></column>
+        <column name="modifiedBy" type="long"></column>
+        <column name="modifiedOn" type="Date"></column>
+        <column name="statusId" type="int"></column>
+
+        <finder name="organizationId" return-type="Collection">
+            <finder-column name="organizationId"></finder-column>
+        </finder>
+        <finder name="T_O" return-type="Collection">
+            <finder-column name="towerTechnologyId"></finder-column>
+            <finder-column name="organizationId"></finder-column>
+        </finder>
+        <finder name="TTechnologyCustomerId" return-type="long">
+            <finder-column name="TTechnologyCustomerId"></finder-column>
+            <finder-column name="organizationId"></finder-column>
+        </finder>
+        <finder name="TowerTechnologyId" return-type="long">
+            <finder-column name="towerTechnologyId"></finder-column>
+            <finder-column name="organizationId"></finder-column>
+        </finder>
+    </entity>
+    
+    <entity name="TTDeliverableCustomerMap" remote-service="false" local-service="true">
+        <column name="TTDeliverableCustomerId" type="long" primary="true"></column>
+        <column name="TTDeliverableId" type="long"></column>
+        <column name="organizationId" type="long"></column>
+        <column name="name" type="String" localized="true"></column>
+        <column name="companyId" type="long"></column>
+        <column name="createdBy" type="long"></column>
+        <column name="createdOn" type="Date"></column>
+        <column name="modifiedBy" type="long"></column>
+        <column name="modifiedOn" type="Date"></column>
+        <column name="statusId" type="int"></column>
+
+        <finder name="organizationId" return-type="Collection">
+            <finder-column name="organizationId"></finder-column>
+        </finder>
+        <finder name="TTDeliverableId" return-type="long">
+            <finder-column name="TTDeliverableId"></finder-column>
+            <finder-column name="organizationId"></finder-column>
+        </finder>
+        <finder name="TTDeliverableCustomerId" return-type="long">
+            <finder-column name="TTDeliverableCustomerId"></finder-column>
+            <finder-column name="organizationId"></finder-column>
+        </finder>        
+        
+    </entity>
+    
+    <entity name="TTDProcessCustomerMap" remote-service="false" local-service="true">
+        <column name="TTDProcessCustomerId" type="long" primary="true"></column>
+        <column name="TTDProcessId" type="long"></column>
+        <column name="organizationId" type="long"></column>
+        <column name="name" type="String" localized="true"></column>
+        <column name="companyId" type="long"></column>
+        <column name="createdBy" type="long"></column>
+        <column name="createdOn" type="Date"></column>
+        <column name="modifiedBy" type="long"></column>
+        <column name="modifiedOn" type="Date"></column>
+        <column name="statusId" type="int"></column>
+
+        <finder name="organizationId" return-type="Collection">
+            <finder-column name="organizationId"></finder-column>
+        </finder>
+        <finder return-type="long" name="TTDProcessId">
+            <finder-column name="TTDProcessId"></finder-column>
+            <finder-column name="organizationId"></finder-column>
+        </finder>
+        <finder name="TTDProcessCustomerId" return-type="long">
+            <finder-column name="TTDProcessCustomerId"></finder-column>
+            <finder-column name="organizationId"></finder-column>
+        </finder>
+        <finder name="ProcessCustomerMap" return-type="TTDProcessCustomerMap">
+            <finder-column name="organizationId"></finder-column>
+            <finder-column name="TTDProcessId"></finder-column>
+            <finder-column name="statusId"></finder-column>
+        </finder>         
+    </entity>
+    
+    <entity name="TTDPSubProcessCustomerMap" remote-service="false" local-service="true">
+        <column name="TTDPSubProcessCustomerId" type="long" primary="true"></column>
+        <column name="TTDPSubProcessId" type="long" ></column>
+        <column name="organizationId" type="long"></column>
+        <column name="name" type="String" localized="true"></column>
+        <column name="companyId" type="long"></column>
+        <column name="createdBy" type="long"></column>
+        <column name="createdOn" type="Date"></column>
+        <column name="modifiedBy" type="long"></column>
+        <column name="modifiedOn" type="Date"></column>
+        <column name="statusId" type="int"></column>
+
+        <finder name="organizationId" return-type="Collection">
+        	<finder-column name="organizationId"></finder-column>
+        </finder>
+        <finder name="TTDPSubProcessId" return-type="long">
+            <finder-column name="TTDPSubProcessId"></finder-column>
+            <finder-column name="organizationId"></finder-column>
+        </finder>
+        <finder name="TTDPSubProcessCustomerId" return-type="long">
+            <finder-column name="TTDPSubProcessCustomerId"></finder-column>
+            <finder-column name="organizationId"></finder-column>
+        </finder>
+        <finder name="SubProcessCustomerMap" return-type="TTDPSubProcessCustomerMap">
+            <finder-column name="organizationId"></finder-column>
+            <finder-column name="TTDPSubProcessId"></finder-column>
+            <finder-column name="statusId"></finder-column>
+        </finder>         
+    </entity>
+    
+    <entity name="TTDPSPTaskCustomerMap" remote-service="false" local-service="true">
+        <column name="TTDPSPTaskCustomerId" type="long" primary="true"></column>
+        <column name="TTDPSubProcessId" type="long"></column>
+        <column name="taskId" type="long"></column>
+        <column name="orderBy" type="int"></column>
+        <column name="organizationId" type="long"></column>
+        <column name="name" type="String" localized="true"></column>
+        <column name="taskTypeId" type="int"></column>
+        <column name="companyId" type="long"></column>
+        <column name="createdBy" type="long"></column>
+        <column name="createdOn" type="Date"></column>
+        <column name="modifiedBy" type="long"></column>
+        <column name="modifiedOn" type="Date"></column>
+        <column name="statusId" type="int"></column>
+        <column name="doGroupId" type="long"></column>
+        
+        <column name="taskAssessmentId"  type="long"/>
+        <column name="parentTTDPSPTaskCustMapId" type="long"></column>
+        <column name="linkedTTDPSubprocessCustMapId" type="long"></column>
+        <column name="taskOrderNumber" type="int"></column>
+
+        <finder name="organizationId" return-type="Collection">
+            <finder-column name="organizationId"></finder-column>
+        </finder>
+        <finder name="taskId" return-type="long">
+            <finder-column name="taskId"></finder-column>
+            <finder-column name="organizationId"></finder-column>
+        </finder>
+        <finder name="TTDPSPTaskCustomerId" return-type="long"> 
+            <finder-column name="TTDPSPTaskCustomerId"></finder-column>
+            <finder-column name="organizationId"></finder-column>
+        </finder>
+        <finder name="orgSubProcessId" return-type="Collection">
+            <finder-column name="organizationId"></finder-column>
+            <finder-column name="TTDPSubProcessId"></finder-column>
+        </finder>
+        <finder name="TTDPSPTaskCustomerMapBy" return-type="TTDPSPTaskCustomerMap">
+            <finder-column name="TTDPSubProcessId"></finder-column>
+            <finder-column name="taskId"></finder-column>
+            <finder-column name="organizationId"></finder-column>
+        </finder>
+        
+    </entity>
+    
+    <entity name="TTDPSPCustDecisionTaskTable" local-service="true" remote-service="false">
+   		<column name="TTDPSPCustDecisionTaskTableId" primary="true" type="long"></column>
+    	<column name="subTTDPSPTaskCustomerId" type="long"></column>
+    	<column name="condition" type="boolean"></column>
+        <column name="order" type="int"></column>
+        <column name="parentTTDPSPTaskCustomerId" type="long"></column>
+
+		<finder name="ParentTTDPSPTaskCustomerId" return-type="Collection">
+             <finder-column name="parentTTDPSPTaskCustomerId"></finder-column>
+       	</finder>
+       	<finder name="TTDPSPCustDecisionTaskTable" return-type="TTDPSPCustDecisionTaskTable">
+             <finder-column name="parentTTDPSPTaskCustomerId"></finder-column>
+             <finder-column name="subTTDPSPTaskCustomerId"></finder-column>
+             <finder-column name="condition"></finder-column>
+       	</finder>
+       	 <finder name="ParentTTDPSPTaskCustomerIdAndCondition" return-type="Collection">
+            <finder-column name="parentTTDPSPTaskCustomerId" ></finder-column>
+            <finder-column name="condition" ></finder-column>
+        </finder>
+    </entity> 
+    
+</service-builder>

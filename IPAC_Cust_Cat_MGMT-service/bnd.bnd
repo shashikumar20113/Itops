@@ -1,0 +1,8 @@
+Bundle-Name: IPAC_Cust_Cat_MGMT-service
+Bundle-SymbolicName: com.lti.itops.ipac.custcatmgmt.service
+Bundle-Version: 1.0.0
+Liferay-Require-SchemaVersion: 1.0.0
+Liferay-Service: true
+Export-Package: \
+	com.lti.itops.ipac.custcatmgmt.util,\
+	com.lti.itops.ipac.custcatmgmt.permission

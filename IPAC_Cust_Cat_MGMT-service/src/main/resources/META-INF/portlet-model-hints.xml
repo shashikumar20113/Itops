@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.lti.itops.ipac.custcatmgmt.model.TowerCustomerMap">
+		<field name="towerCustomerId" type="long" />
+		<field name="towerId" type="long" />
+		<field name="organizationId" type="long" />
+		<field localized="true" name="name" type="String" />
+		<field name="companyId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createdOn" type="Date" />
+		<field name="modifiedBy" type="long" />
+		<field name="modifiedOn" type="Date" />
+		<field name="statusId" type="int" />
+	</model>
+	<model name="com.lti.itops.ipac.custcatmgmt.model.TTDeliverableCustomerMap">
+		<field name="TTDeliverableCustomerId" type="long" />
+		<field name="TTDeliverableId" type="long" />
+		<field name="organizationId" type="long" />
+		<field localized="true" name="name" type="String" />
+		<field name="companyId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createdOn" type="Date" />
+		<field name="modifiedBy" type="long" />
+		<field name="modifiedOn" type="Date" />
+		<field name="statusId" type="int" />
+	</model>
+	<model name="com.lti.itops.ipac.custcatmgmt.model.TTDProcessCustomerMap">
+		<field name="TTDProcessCustomerId" type="long" />
+		<field name="TTDProcessId" type="long" />
+		<field name="organizationId" type="long" />
+		<field localized="true" name="name" type="String" />
+		<field name="companyId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createdOn" type="Date" />
+		<field name="modifiedBy" type="long" />
+		<field name="modifiedOn" type="Date" />
+		<field name="statusId" type="int" />
+	</model>
+	<model name="com.lti.itops.ipac.custcatmgmt.model.TTDPSPCustDecisionTaskTable">
+		<field name="TTDPSPCustDecisionTaskTableId" type="long" />
+		<field name="subTTDPSPTaskCustomerId" type="long" />
+		<field name="condition" type="boolean" />
+		<field name="order" type="int" />
+		<field name="parentTTDPSPTaskCustomerId" type="long" />
+	</model>
+	<model name="com.lti.itops.ipac.custcatmgmt.model.TTDPSPTaskCustomerMap">
+		<field name="TTDPSPTaskCustomerId" type="long" />
+		<field name="TTDPSubProcessId" type="long" />
+		<field name="taskId" type="long" />
+		<field name="orderBy" type="int" />
+		<field name="organizationId" type="long" />
+		<field localized="true" name="name" type="String" />
+		<field name="taskTypeId" type="int" />
+		<field name="companyId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createdOn" type="Date" />
+		<field name="modifiedBy" type="long" />
+		<field name="modifiedOn" type="Date" />
+		<field name="statusId" type="int" />
+		<field name="doGroupId" type="long" />
+		<field name="taskAssessmentId" type="long" />
+		<field name="parentTTDPSPTaskCustMapId" type="long" />
+		<field name="linkedTTDPSubprocessCustMapId" type="long" />
+		<field name="taskOrderNumber" type="int" />
+	</model>
+	<model name="com.lti.itops.ipac.custcatmgmt.model.TTDPSubProcessCustomerMap">
+		<field name="TTDPSubProcessCustomerId" type="long" />
+		<field name="TTDPSubProcessId" type="long" />
+		<field name="organizationId" type="long" />
+		<field localized="true" name="name" type="String" />
+		<field name="companyId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createdOn" type="Date" />
+		<field name="modifiedBy" type="long" />
+		<field name="modifiedOn" type="Date" />
+		<field name="statusId" type="int" />
+	</model>
+	<model name="com.lti.itops.ipac.custcatmgmt.model.TTechnologyCustomerMap">
+		<field name="TTechnologyCustomerId" type="long" />
+		<field name="towerTechnologyId" type="long" />
+		<field name="organizationId" type="long" />
+		<field localized="true" name="name" type="String" />
+		<field name="companyId" type="long" />
+		<field name="createdBy" type="long" />
+		<field name="createdOn" type="Date" />
+		<field name="modifiedBy" type="long" />
+		<field name="modifiedOn" type="Date" />
+		<field name="statusId" type="int" />
+	</model>
+</model-hints>

@@ -1,0 +1,4 @@
+Bundle-Name: IPAC_Cust_Cat_MGMT-web
+Bundle-SymbolicName: com.lti.itops.ipac.custcatmgmt.web
+Bundle-Version: 1.0.0
+Export-Package: com.lti.itops.ipac.custcatmgmt.constants

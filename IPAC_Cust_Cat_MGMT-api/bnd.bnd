@@ -1,0 +1,9 @@
+Bundle-Name: IPAC_Cust_Cat_MGMT-api
+Bundle-SymbolicName: com.lti.itops.ipac.custcatmgmt.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	com.lti.itops.ipac.custcatmgmt.exception,\
+	com.lti.itops.ipac.custcatmgmt.model,\
+	com.lti.itops.ipac.custcatmgmt.service,\
+	com.lti.itops.ipac.custcatmgmt.service.persistence
+-includeresource: META-INF/service.xml=../IPAC_Cust_Cat_MGMT-service/service.xml

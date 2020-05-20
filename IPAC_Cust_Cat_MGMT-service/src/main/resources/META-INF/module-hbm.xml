@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping auto-import="false" default-lazy="false">
+	<import class="com.lti.itops.ipac.custcatmgmt.model.TowerCustomerMap" />
+	<import class="com.lti.itops.ipac.custcatmgmt.model.TTDeliverableCustomerMap" />
+	<import class="com.lti.itops.ipac.custcatmgmt.model.TTDProcessCustomerMap" />
+	<import class="com.lti.itops.ipac.custcatmgmt.model.TTDPSPCustDecisionTaskTable" />
+	<import class="com.lti.itops.ipac.custcatmgmt.model.TTDPSPTaskCustomerMap" />
+	<import class="com.lti.itops.ipac.custcatmgmt.model.TTDPSubProcessCustomerMap" />
+	<import class="com.lti.itops.ipac.custcatmgmt.model.TTechnologyCustomerMap" />
+	<class name="com.lti.itops.ipac.custcatmgmt.model.impl.TowerCustomerMapImpl" table="IPAC_CUST_CAT_MGMT_TowerCustomerMap">
+		<id name="towerCustomerId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="towerId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="organizationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdOn" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedOn" type="org.hibernate.type.TimestampType" />
+		<property name="statusId" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.lti.itops.ipac.custcatmgmt.model.impl.TTDeliverableCustomerMapImpl" table="IPAC_CUST_CAT_MGMT_TTDeliverableCustomerMap">
+		<id name="TTDeliverableCustomerId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="TTDeliverableId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="organizationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdOn" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedOn" type="org.hibernate.type.TimestampType" />
+		<property name="statusId" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.lti.itops.ipac.custcatmgmt.model.impl.TTDProcessCustomerMapImpl" table="IPAC_CUST_CAT_MGMT_TTDProcessCustomerMap">
+		<id name="TTDProcessCustomerId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="TTDProcessId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="organizationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdOn" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedOn" type="org.hibernate.type.TimestampType" />
+		<property name="statusId" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.lti.itops.ipac.custcatmgmt.model.impl.TTDPSPCustDecisionTaskTableImpl" table="IPAC_CUST_CAT_MGMT_TTDPSPCustDecisionTaskTable">
+		<id name="TTDPSPCustDecisionTaskTableId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="subTTDPSPTaskCustomerId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property column="condition_" name="condition" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property column="order_" name="order" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="parentTTDPSPTaskCustomerId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+	</class>
+	<class name="com.lti.itops.ipac.custcatmgmt.model.impl.TTDPSPTaskCustomerMapImpl" table="IPAC_CUST_CAT_MGMT_TTDPSPTaskCustomerMap">
+		<id name="TTDPSPTaskCustomerId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="TTDPSubProcessId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="taskId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="orderBy" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="organizationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="taskTypeId" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdOn" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedOn" type="org.hibernate.type.TimestampType" />
+		<property name="statusId" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+		<property name="doGroupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="taskAssessmentId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="parentTTDPSPTaskCustMapId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="linkedTTDPSubprocessCustMapId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="taskOrderNumber" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.lti.itops.ipac.custcatmgmt.model.impl.TTDPSubProcessCustomerMapImpl" table="IPAC_CUST_CAT_MGMT_TTDPSubProcessCustomerMap">
+		<id name="TTDPSubProcessCustomerId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="TTDPSubProcessId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="organizationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdOn" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedOn" type="org.hibernate.type.TimestampType" />
+		<property name="statusId" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+	<class name="com.lti.itops.ipac.custcatmgmt.model.impl.TTechnologyCustomerMapImpl" table="IPAC_CUST_CAT_MGMT_TTechnologyCustomerMap">
+		<id name="TTechnologyCustomerId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="towerTechnologyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="organizationId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createdOn" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedBy" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="modifiedOn" type="org.hibernate.type.TimestampType" />
+		<property name="statusId" type="com.liferay.portal.dao.orm.hibernate.IntegerType" />
+	</class>
+</hibernate-mapping>

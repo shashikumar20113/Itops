@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<beans
+	default-destroy-method="destroy"
+	default-init-method="afterPropertiesSet"
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+	<bean class="com.lti.itops.ipac.custcatmgmt.service.impl.TowerCustomerMapLocalServiceImpl" id="com.lti.itops.ipac.custcatmgmt.service.TowerCustomerMapLocalService" />
+	<bean class="com.lti.itops.ipac.custcatmgmt.service.persistence.impl.TowerCustomerMapPersistenceImpl" id="com.lti.itops.ipac.custcatmgmt.service.persistence.TowerCustomerMapPersistence" parent="basePersistence" />
+	<bean class="com.lti.itops.ipac.custcatmgmt.service.impl.TTDeliverableCustomerMapLocalServiceImpl" id="com.lti.itops.ipac.custcatmgmt.service.TTDeliverableCustomerMapLocalService" />
+	<bean class="com.lti.itops.ipac.custcatmgmt.service.persistence.impl.TTDeliverableCustomerMapPersistenceImpl" id="com.lti.itops.ipac.custcatmgmt.service.persistence.TTDeliverableCustomerMapPersistence" parent="basePersistence" />
+	<bean class="com.lti.itops.ipac.custcatmgmt.service.impl.TTDProcessCustomerMapLocalServiceImpl" id="com.lti.itops.ipac.custcatmgmt.service.TTDProcessCustomerMapLocalService" />
+	<bean class="com.lti.itops.ipac.custcatmgmt.service.persistence.impl.TTDProcessCustomerMapPersistenceImpl" id="com.lti.itops.ipac.custcatmgmt.service.persistence.TTDProcessCustomerMapPersistence" parent="basePersistence" />
+	<bean class="com.lti.itops.ipac.custcatmgmt.service.impl.TTDPSPCustDecisionTaskTableLocalServiceImpl" id="com.lti.itops.ipac.custcatmgmt.service.TTDPSPCustDecisionTaskTableLocalService" />
+	<bean class="com.lti.itops.ipac.custcatmgmt.service.persistence.impl.TTDPSPCustDecisionTaskTablePersistenceImpl" id="com.lti.itops.ipac.custcatmgmt.service.persistence.TTDPSPCustDecisionTaskTablePersistence" parent="basePersistence" />
+	<bean class="com.lti.itops.ipac.custcatmgmt.service.impl.TTDPSPTaskCustomerMapLocalServiceImpl" id="com.lti.itops.ipac.custcatmgmt.service.TTDPSPTaskCustomerMapLocalService" />
+	<bean class="com.lti.itops.ipac.custcatmgmt.service.persistence.impl.TTDPSPTaskCustomerMapPersistenceImpl" id="com.lti.itops.ipac.custcatmgmt.service.persistence.TTDPSPTaskCustomerMapPersistence" parent="basePersistence" />
+	<bean class="com.lti.itops.ipac.custcatmgmt.service.impl.TTDPSubProcessCustomerMapLocalServiceImpl" id="com.lti.itops.ipac.custcatmgmt.service.TTDPSubProcessCustomerMapLocalService" />
+	<bean class="com.lti.itops.ipac.custcatmgmt.service.persistence.impl.TTDPSubProcessCustomerMapPersistenceImpl" id="com.lti.itops.ipac.custcatmgmt.service.persistence.TTDPSubProcessCustomerMapPersistence" parent="basePersistence" />
+	<bean class="com.lti.itops.ipac.custcatmgmt.service.impl.TTechnologyCustomerMapLocalServiceImpl" id="com.lti.itops.ipac.custcatmgmt.service.TTechnologyCustomerMapLocalService" />
+	<bean class="com.lti.itops.ipac.custcatmgmt.service.persistence.impl.TTechnologyCustomerMapPersistenceImpl" id="com.lti.itops.ipac.custcatmgmt.service.persistence.TTechnologyCustomerMapPersistence" parent="basePersistence" />
+</beans>

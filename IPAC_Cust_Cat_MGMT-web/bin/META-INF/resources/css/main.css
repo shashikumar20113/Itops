@@ -1,0 +1,177 @@
+.aui table tr .disabled
+{
+	color:red;
+}
+
+.portlet th.keyColumn{
+    display: none;
+}
+.portlet td.keyColumn{
+    display: none;
+}
+
+.aui .table tr .logo_col
+{
+	vertical-align: middle;
+	text-align:center;
+}
+.aui .table tr .logo_col img
+{
+	max-width:300px;
+	max-height:100px;
+}
+.aui .table tr td
+{
+	vertical-align:middle;
+}
+.aui .table thead tr th
+{
+	text-align: center;
+	vertical-align: middle;
+}
+
+.aui table tr .disabled
+{
+	color:red;
+}
+.selectOptions
+{
+	padding: 1em;	
+}
+
+/* CSS code added by Moneekaparvathy Jagadhesan */
+
+.dom_class
+{
+	background-color:#645F90;
+}
+
+.tech_class
+{
+	background-color:#E25273;
+	height:12em;
+}
+
+.deli_class
+{
+	background-color:#44b4c6;
+	height:12em;
+}
+
+.proc_class
+{
+	 background-color:#E2C574;
+	 height:12em;
+}
+
+.sproc_class
+{
+	background-color:#E2A27D;
+	height:12em;
+}
+
+.task_class
+{
+	background-color:#94B584;
+	height:12em;
+}
+
+#_customercatalogmanagement_WAR_IPAC_Customer_Catalog_Managementportlet_dom_icon
+{
+    background-image:url(/IPAC_Customer_Catalog_Management-portlet/images/DomainIcon1.png);
+}
+
+#_customercatalogmanagement_WAR_IPAC_Customer_Catalog_Managementportlet_tech_icon
+{
+    background-image:url(/IPAC_Customer_Catalog_Management-portlet/images/Technology1.png);
+}
+
+#_customercatalogmanagement_WAR_IPAC_Customer_Catalog_Managementportlet_deli_icon
+{
+    background-image:url(/IPAC_Customer_Catalog_Management-portlet/images/Deliverable1.png);
+}
+
+#_customercatalogmanagement_WAR_IPAC_Customer_Catalog_Managementportlet_proc_icon
+{
+    background-image:url(/IPAC_Customer_Catalog_Management-portlet/images/Process3.png);
+}
+
+#_customercatalogmanagement_WAR_IPAC_Customer_Catalog_Managementportlet_sproc_icon
+{
+    background-image:url(/IPAC_Customer_Catalog_Management-portlet/images/Sub_process1.png);
+}
+
+#_customercatalogmanagement_WAR_IPAC_Customer_Catalog_Managementportlet_task_icon
+{
+    background-image:url(/IPAC_Customer_Catalog_Management-portlet/images/Task1.png);
+}
+
+#treeView
+{
+	padding-top:3%;
+}
+
+.summary
+{
+	color:#FFFFFF;
+	width:100%;
+	display:table;
+	padding-top:2%;	
+}
+
+.sum_text
+{
+    font-size:1.5em;
+    height:30%;
+    text-align:left;
+    display:table;
+    vertical-align:middle;
+}
+
+.sum_count
+{
+	font-size:5em;
+	text-align:left;
+	height:70%;
+	display:table;
+	vertical-align:middle;
+}
+
+.division
+{
+	display:table-cell;
+	vertical-align:middle;
+}
+
+.sum_icon,.sum_info
+{
+    height:100%;
+    width:100%;
+    display:inline-block;
+    background-size:100% 100%;
+    background-size:8em;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.my_row
+{
+		border:4px solid #FFF;
+		height:12em;
+		box-shadow: 10px 10px 10px #FFFFFF;
+}
+
+.row_last
+{
+    padding-top:0.5em;
+    padding-bottom:0.5em;
+    margin-top:0.5em;
+    margin-bottom:0.5em;  
+}
+
+.hideDiv
+{
+	
+	visibility:hidden;
+	
+}
